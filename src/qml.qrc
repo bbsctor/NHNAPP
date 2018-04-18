@@ -1,0 +1,49 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">qml/main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>qml/top/TopBar.qml</file>
+        <file>qml/content/ContentFrame.qml</file>
+        <file>qml/content/meansure/MeansureScreen.qml</file>
+        <file>qml/content/display/RealTimeDisplayScreen.qml</file>
+        <file>qml/content/query/QueryScreen.qml</file>
+        <file>qml/top/LoginDialog.qml</file>
+        <file>qml/top/SysInfoDisplayBlock.qml</file>
+        <file>qml/bottom/BottomBar.qml</file>
+        <file>qml/content/setting/SettingScreen.qml</file>
+        <file>qml/content/display/Divider.qml</file>
+        <file>qml/content/setting/SystemSettingBlock.qml</file>
+        <file>qml/content/maintain/MaintainScreen.qml</file>
+        <file>qml/content/maintain/SystemMaintainBlock.qml</file>
+        <file>qml/content/setting/ParameterSettingBlock.qml</file>
+        <file>qml/content/setting/PeriodSettingBlock.qml</file>
+        <file>qml/content/maintain/MaintainDataBlock.qml</file>
+        <file>qml/content/maintain/FunctionTestBlock.qml</file>
+        <file>qml/content/query/HistoryGraphBlock.qml</file>
+        <file>qml/content/query/HistoryDataBlock.qml</file>
+        <file>qml/content/query/AlertInfoBlock.qml</file>
+        <file>qml/content/query/LogInfoBlock.qml</file>
+        <file>qml/content/query/SystemInfoBlock.qml</file>
+        <file>pic/settings.png</file>
+        <file>qml/top/TopBarButton.qml</file>
+        <file>pic/home.png</file>
+        <file>pic/maintain.png</file>
+        <file>pic/meansure.png</file>
+        <file>pic/query.png</file>
+        <file>pic/login.png</file>
+        <file>qml/top/LoginBlock.qml</file>
+        <file>qml/common/dateTime/DatePicker.qml</file>
+        <file>qml/common/dateTime/TimeEdit.qml</file>
+        <file>qml/common/dateTime/TimeInput.qml</file>
+        <file>qml/common/label/ContentLabel.qml</file>
+        <file>qml/common/combo/ContentComboBox.qml</file>
+        <file>qml/common/textField/ContentTextField.qml</file>
+        <file>qml/common/button/ContentButton.qml</file>
+        <file>qml/common/tab/ContentTabViewStyle.qml</file>
+        <file>qml/common/digitalPanel/DigitalPanel.qml</file>
+        <file>qml/common/digitalPanel/DigitalButton.qml</file>
+        <file>qml/common/tableView/ContentTableViewStyle.qml</file>
+        <file>qml/common/dateTime/ContentCalendarStyle.qml</file>
+        <file>qml/content/setting/BCLJZJSettingBlock1.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/top">
+        <file>qml/images/top/homePage.png</file>
+    </qresource>
+</RCC>
