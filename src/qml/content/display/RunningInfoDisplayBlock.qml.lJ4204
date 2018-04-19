@@ -1,0 +1,131 @@
+import QtQuick 2.7
+import QtQuick.Controls 2.0
+import QtQuick.Layouts 1.0
+import ViewManager 1.0
+import "../../common/label"
+import "../../common/button"
+
+Rectangle {
+    color:"light grey"
+    ColumnLayout {
+        id: columnLayout
+
+        width: parent.width
+        height: parent.height
+        Grid {
+            id: grid
+            width: parent.width
+            height: parent.height
+            Layout.fillHeight: false
+            Layout.fillWidth: false
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            spacing: 25
+            rows: 6
+            columns: 2
+
+            ContentLabel {
+                id: label
+                text: qsTr("当前状态：")
+            }
+
+            ContentLabel {
+                id: label1
+                text: viewManager.currentStatus
+            }
+
+            ContentLabel {
+                id: label2
+                text: qsTr("当前动作：")
+            }
+
+            ContentLabel {
+                id: label3
+                text: viewManager.currentAction
+            }
+
+            ContentLabel {
+                id: label4
+                text: qsTr("后续动作：")
+            }
+
+            ContentLabel {
+                id: label5
+                text: viewManager.nextAction
+            }
+
+            ContentLabel {
+                id: label6
+                text: qsTr("消解温度：")
+            }
+
+            ContentLabel {
+                id: label7
+                text: viewManager.dispelTemperature
+            }
+
+            ContentLabel {
+                id: label8
+                text: qsTr("环境温度：")
+            }
+
+            ContentLabel {
+                id: label9
+                text: viewManager.environmentTemperature
+            }
+
+            ContentLabel {
+                id: label10
+                text: qsTr("吸光度：")
+            }
+
+            ContentLabel {
+                id: label11
+                text: viewManager.absorbance
+            }
+        }
+        ProgressBar {
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            id: progressBar
+            width: 400
+            height: 30
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            value: viewManager.progress/100
+        }
+        Grid {
+            id: grid2
+            width: parent.width
+            height: parent.height
+            Layout.fillHeight: false
+            Layout.fillWidth: false
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            spacing: 25
+            rows: 1
+            columns: 2
+
+            ContentButton{
+                id: monitorButton
+                text: qsTr("监控")
+            }
+
+            ContentButton{
+
+            }
+
+            Connections {
+                target: monitorButton
+                onClicked: timer.running = !timer.running
+            }
+        }
+    }
+    Timer
+    {
+        id:timer
+        interval: 5000; running: false; repeat: true
+        onTriggered:viewManager.pullRunningInfo()
+    }
+
+    RunningInfoViewManager{
+        id:viewManager
+    }
+}
